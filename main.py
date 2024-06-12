@@ -5,6 +5,10 @@
 """
     System Includes.
 """
+import machine
+# import traceback
+from utime import sleep
+import _thread
 
 """
     Application Includes.
@@ -24,9 +28,9 @@ from lib import adafruit_rtc as rtc
     20 - Check if Configured
         If NOT Configured call setup_config.py
    
-    30 - Initiliase GPS
-    32 - Initiliase RTCs
-    34 - Initiliase Dataloger
+    30 - Initialise GPS
+    32 - Initialise RTCs
+    34 - Initialise Dataloger
     36 - Read config.json
     38 - Show Main Main
     
@@ -39,16 +43,17 @@ from lib import adafruit_rtc as rtc
 VersionMajor  = 1
 VersionMinor  = 0
 VersionBuild  = 4
-VersionString = f"{VersionMajor}.{VersionMinor}.{VersionBuild}")
-VersionDev    = 0001
+VersionDev    = 10004
+VersionString = f"{VersionMajor}.{VersionMinor}.{VersionBuild},{VersionDev} "
+
 AppName       = "EARS"
 AppType		  = ["Personal","Squad","Section","PLatoon"]
 
 
 """
-    Initiliase Display.
+    Initialise Display.
     
-    Initiliase Waveshare 2 inch LCD TFT Screen 320x240
+    Initialise Waveshare 2 inch LCD TFT Screen 320x240
 """
 def InitialiseDisplay() -> None:
     print("Initialising Display")
