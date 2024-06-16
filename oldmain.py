@@ -3,9 +3,10 @@ from machine import Pin,SPI,PWM
 import framebuf
 import utime
 import os
-import utime
 
+from lib import version_info
 from lib import display_lcd_2in
+from lib import display_initialise
 
 
 # LCD Connection to Raspberry Pi Pico W
@@ -41,6 +42,7 @@ if __name__=='__main__':
     display_author()     # type: ignore
     
 def display_colour_bars() -> None:
+    #while(1):
     utime.sleep(0.1)
     LCD.fill_rect(0,0,320,24,LCD.RED)
     LCD.rect(0,0,320,24,LCD.RED)
@@ -94,7 +96,7 @@ def display_colour_bars() -> None:
 def display_author() -> None:
     LCD.rect(0,0,160,128,colour(0,0,255)) # type: ignore # Blue Frame
     LCD.text("WaveShare", 44,10,colour(255,0,0)) # type: ignore
-    LCD.text('Pico Display 2"', 10,24,colour(255,255,0)) # type: ignore
+    LCD.text('Pico Display 1.8"', 10,24,colour(255,255,0)) # type: ignore
     LCD.text("320x240 SPI", 38,37,colour(0,255,0)) # type: ignore
     LCD.text("Tony Goodhew", 30,48,colour(100,100,100)) # type: ignore
     c = colour(255,240,0) # type: ignore
