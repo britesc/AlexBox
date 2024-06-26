@@ -1,7 +1,7 @@
 """
-	Version Information.
-	
-	Information used throughout the application.
+    Version Information.
+
+    Information used throughout the application.
 """
 
 """
@@ -10,9 +10,9 @@
 VersionMajor  = 1
 VersionMinor  = 0
 VersionBuild  = 4
-VersionDev    = 10100
-VersionString = f"{VersionMajor}.{VersionMinor}.{VersionBuild},{VersionDev}"
+VersionDev    = 10320
+VersionString = f"{VersionMajor}.{VersionMinor}.{VersionBuild}.{VersionDev}"
 
 AppName       = "EARS"
-AppType		  = ["Personal","Squad","Section","PLatoon"]
+AppType       = ["Personal","Squad","Section","PLatoon"]
 
